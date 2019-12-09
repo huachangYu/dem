@@ -1,3 +1,4 @@
+#pragma once
 #include <String>
 #include <vector>
 #include "VPoint.h"
