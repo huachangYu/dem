@@ -1,5 +1,8 @@
 #pragma once
+#include <cmath>
 #include <string>
+
+using namespace std;
 
 class VPoint {
  private:
@@ -17,7 +20,9 @@ class VPoint {
   void setY(double y);
   double getHeight();
   void setHeight(double height);
-  std::string toString();
+  string toString();
+  bool operator==(const VPoint& other);
+  double distance(VPoint other);
 };
 
 VPoint::VPoint() {}
@@ -60,6 +65,18 @@ void VPoint::setHeight(double h) {
   this->height = h;
 }
 
-std::string VPoint::toString() {
-  return "Point:" + std::to_string(x) + "," + std::to_string(y);
+string VPoint::toString() {
+  return "Point:" + to_string(x) + "," + to_string(y);
+}
+
+bool VPoint::operator==(const VPoint& other) {
+  const double eps = 1e-5;
+  return (double)abs(this->x - other.x) < eps &&
+         (double)abs(this->y - other.y) < eps;
+}
+
+double VPoint::distance(VPoint other){
+  double dx=this->x-other.getX();
+  double dy=this->y-other.getY();
+  return sqrt(dx*dx+dy*dy);
 }

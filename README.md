@@ -1,2 +1,2 @@
-# dem
-An implement of the algorithm to build Delaunay triangulation.
+# DEM
+An implement of the algorithm to build Delaunay Triangulation.

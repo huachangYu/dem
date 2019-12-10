@@ -37,6 +37,10 @@
         "xstring": "cpp",
         "xtr1common": "cpp",
         "xutility": "cpp",
-        "fstream": "cpp"
+        "fstream": "cpp",
+        "algorithm": "cpp",
+        "map": "cpp",
+        "xtree": "cpp",
+        "queue": "cpp"
     }
 }

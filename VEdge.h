@@ -1,13 +1,11 @@
 #pragma once
 #include <cmath>
-#include <iostream>
-using namespace std;
 #include "VPoint.h"
 #include "VTriangle.h"
 
 class VEdge {
  private:
-  const double eps = 0.00001;
+  const double eps = 1e-6;
   VTriangle leftTriangle;
   VTriangle rightTriangle;
   VPoint startPoint, endPoint;
@@ -19,6 +17,10 @@ class VEdge {
   bool operator==(const VEdge& other);
   VPoint getStartPoint();
   VPoint getEndPoint();
+  VTriangle getLeftTriangle();
+  VTriangle getRightTriangle();
+  void setLeftTriangle(VTriangle leftTriangle);
+  void setRightTriangle(VTriangle rightTriangle);
 };
 
 VEdge::VEdge(VPoint startPoint, VPoint endPoint) {
@@ -39,6 +41,21 @@ VPoint VEdge::getEndPoint() {
 VPoint VEdge::getStartPoint() {
   return startPoint;
 }
+
+VTriangle VEdge::getLeftTriangle() {
+  return this->leftTriangle;
+}
+void VEdge::setLeftTriangle(VTriangle leftTriangle) {
+  this->leftTriangle = leftTriangle;
+}
+
+VTriangle VEdge::getRightTriangle() {
+  return this->rightTriangle;
+}
+void VEdge::setRightTriangle(VTriangle rightTriangle) {
+  this->rightTriangle = rightTriangle;
+}
+
 bool VEdge::operator==(const VEdge& other) {
   VPoint tEndPoint = other.endPoint;
   VPoint tStartPoint = other.startPoint;
