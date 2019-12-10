@@ -49,7 +49,6 @@ void TriangleNet::triangleGrownth() {
   queue<pair<int, int>> outlineEdgesInd;
   queue<pair<int, int>> nextOutlineEdgesInd;
   vector<vector<bool>> visit(points.size(), vector<bool>(points.size(),false));
-  int visitNum = 0;
   // find the nearest point around a certain point
   VPoint tPoint = points[0];
   double minPointInd = 1;
@@ -61,11 +60,6 @@ void TriangleNet::triangleGrownth() {
     }
   }
   outlineEdgesInd.push(make_pair(0, minPointInd));
-  visitNum += 2;
-  //cout << 0 << "\n";
-  //cout << minPointInd << "\n";
-  //visit[0][minPointInd] = true;
-  //visit[minPointInd][0] = true;
   // start growing
   while (outlineEdgesInd.size() > 0) {
     pair<int, int> tEdgeInd = outlineEdgesInd.front();
@@ -90,9 +84,6 @@ void TriangleNet::triangleGrownth() {
         }
         if (!containsPoint) {
           triangles.push_back(tTriangle);
-          //cout << tEdgeInd.first << " " << tEdgeInd.second << " " << j << "\n";
-          visitNum++;
-          //cout<<visitNum<<"\n";
           outlineEdgesInd.push(make_pair(tEdgeInd.first, j));
           outlineEdgesInd.push(make_pair(j, tEdgeInd.second));
           break;
