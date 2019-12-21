@@ -1,5 +1,5 @@
 # DEM
-An implement of the algorithm to build Delaunay Triangulation.
+An implement of the algorithm to build [Delaunay Triangulation](https://en.wikipedia.org/wiki/Delaunay_triangulation).
 ## Usage
 use cpp to build the Triangulation.  
 `gcc main.cpp`  
