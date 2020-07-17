@@ -10,7 +10,7 @@ for linux, use
 `./main.o`  
 then, use python to draw the delaunay triangulation  
 `python draw.py`  
-I recomand you to run it on windows because I havn't check whether it work well on linux.
+You are supposed to run it on windows because I havn't check whether it work well on linux.
 ## Result
 ![result](./pics/net.png)
 The algorithm may be a little slow
