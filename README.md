@@ -1,8 +1,7 @@
 # DEM
 An implement of the algorithm to build [Delaunay Triangulation](https://en.wikipedia.org/wiki/Delaunay_triangulation).
-## Usage
-use cpp to build the Triangulation.  
-`gcc main.cpp`  
+## Usage  
+run `gcc main.cpp`  
 for windows users, run `main.exe`  
 or  
 for linux users, run `./main.o`  
