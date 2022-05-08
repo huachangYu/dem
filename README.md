@@ -10,4 +10,4 @@ then, use python to draw the delaunay triangulation
 You are supposed to run it on windows because I havn't check whether it work well on linux.
 ## Result
 ![result](./pics/net.png)
-The algorithm may cost a lot of time when the number of points is large
+The algorithm may cost long time if the points is too many. Time complexity is o(n^3^)
